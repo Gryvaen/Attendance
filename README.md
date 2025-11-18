@@ -1,10 +1,5 @@
-软件下载地址[AttendanceInstaller.exe]：
-
-https://github.com/Gryvaen/Attendance/releases/tag/v1.0 [gitee]
-
-
-
-数据库用的时SQLite，保存的数据库文件在根目录下的db文件夹，里面有两个.db分别是poem.db和class.db
+#### 配置文件位置
+数据库SQLite，保存的数据库文件在根目录下的db文件夹，里面有两个.db分别是poem.db和class.db
 
 用户背景配置用的是json保存，文件也在根目录下，名为user_theme.json
 
