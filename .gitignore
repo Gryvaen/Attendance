@@ -361,3 +361,11 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Local weather credentials and private student databases
+appsettings.local.json
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
