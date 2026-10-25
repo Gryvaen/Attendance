@@ -369,3 +369,4 @@ appsettings.local.json
 *.db-wal
 *.sqlite
 *.sqlite3
+/dist/

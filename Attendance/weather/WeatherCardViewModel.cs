@@ -127,6 +127,13 @@ namespace Attendance.weather
 
         private async Task InitAsync()
         {
+            if (string.IsNullOrWhiteSpace(ApiKey) || string.IsNullOrWhiteSpace(ApiHost) ||
+                ApiHost == "https://your-qweather-api-host")
+            {
+                WeatherText = "未配置天气服务";
+                Weather.WeatherReadyNotifier.ReadySignal.TrySetResult(true);
+                return;
+            }
             await GetCoordinatesFromIPAsync();
             await GetLocationIdAsync();
             await GetWeatherAsync();

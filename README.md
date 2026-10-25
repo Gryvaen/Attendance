@@ -78,6 +78,8 @@ Attendance/Resources/chinese-gushiwen/
 
 古诗文数据来源：<https://github.com/caoxingyu/chinese-gushiwen>
 
+自动发布使用公开镜像 <https://github.com/aopao/chinese-gushiwen> 中的原始提交 `34956ae167a585986d51bcc8dbd17a9f1d8e4ae9`。
+
 如果该目录为空，应用仍可启动，但诗词展示、诗词搜索和每日诗句相关功能无法正常生成完整数据。
 
 ### 3. 配置天气 API
@@ -319,3 +321,7 @@ appsettings.json   # 天气 API 配置
 仓库中的 `appsettings.json` 只保留占位配置。请在 `Attendance/appsettings.local.json` 中填写自己的 `WeatherApi.ApiHost` 和 `WeatherApi.ApiKey`；该文件被 Git 忽略，并覆盖默认配置。不要提交真实密钥或学生数据库。
 
 本地配置会复制到开发构建输出，发布时不会复制。不要分发本地 `bin/` 目录；对外发布请使用 `dotnet publish` 的输出，并检查其中没有 `appsettings.local.json`。已公开过的密钥必须在服务商后台撤销或轮换，删除提交不能使它失效。
+
+### 自动生成 Windows 安装包
+
+在 GitHub Actions 中运行 `Release Windows installer`，填写三段版本号（例如 `1.0.1`）。工作流在 Windows 上构建 x64 自包含版本，检查发布配置和文件，生成安装包并执行静默安装与主窗口启动检查，全部通过后发布到 GitHub Releases。发布资源包含 `AttendanceInstaller.exe` 和 `SHA256SUMS.txt`。
