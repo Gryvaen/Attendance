@@ -14,7 +14,6 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 OutputDir=..\dist
 OutputBaseFilename=AttendanceInstaller
-SetupIconFile=..\Attendance\Resources\Images\Icon.ico
 UninstallDisplayIcon={app}\Attendance.exe
 Compression=lzma2
 SolidCompression=yes
